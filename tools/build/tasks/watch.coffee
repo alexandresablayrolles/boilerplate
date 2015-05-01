@@ -9,4 +9,5 @@ gulp.task 'watch', ['build'], ->
   gulp.src parameters.paths.www.main
   .pipe webserver
     livereload: true
+    host: 'localhost'
     fallback: 'index.html'

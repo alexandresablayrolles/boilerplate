@@ -8,7 +8,7 @@ modulePlaceholder = '%module%'
 srcPath = 'src'
 assetsPlaceholder = '%assets%'
 assetsFolder = 'assets'
-assetsPath = "#{srcPath}/#{assetsFolder}"
+assetsPath = "#{srcPath}/common/#{assetsFolder}"
 
 wwwPath = 'www'
 scriptsPlaceholder = '%scripts%'
@@ -18,17 +18,23 @@ stylesPlaceholder = '%styles%'
 stylesFolder = 'css'
 stylesPath = "#{wwwPath}/#{stylesFolder}"
 
+imagesFolder = 'img'
+imagesPath = "#{wwwPath}/#{imagesFolder}"
+
 config =
 
   paths:
     src:
       main: srcPath
       assets: assetsPath
+      styles: "#{srcPath}/common/styles"
+      images: "#{srcPath}/common/images"
       i18n: 'i18n'
     www:
       main: wwwPath
       scripts: scriptsPath
       styles: stylesPath
+      images: imagesPath
 
   folders:
     scripts:

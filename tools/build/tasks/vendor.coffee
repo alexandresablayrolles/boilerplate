@@ -8,6 +8,14 @@ wiredep = require 'wiredep'
 parameters = require '../parameters.coffee'
 
 gulp.task 'vendor', ->
+  # Styles
+  gulp.src mainBowerFiles()
+  .pipe plumber()
+  .pipe filter [
+      '**/*.css'
+    ]
+  .pipe gulp.dest "#{parameters.paths.www.main}/css"
+
   # Scripts
   files = wiredep
       devDependencies: parameters.env is not 'production'
